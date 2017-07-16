@@ -30,5 +30,7 @@ sleep 10
 echo -ne "\nWifi SSID: "; iwgetid -r
 sleep 5
 # TODO check for options to fix the certificate activation error message for https
-cd /tmp/; wget --no-check-certificate https://raw.githubusercontent.com/openaps/docs/dev/scripts/openaps-install.sh; bash ./openaps-install.sh
+# TODO: change back to dev after merging install-scripts to dev, then to master after docs release
+cd /tmp/; rm ./openaps-install.sh 2>/dev/null
+wget --no-check-certificate https://raw.githubusercontent.com/openaps/oref0/install-scripts/bin/openaps-install.sh && bash ./openaps-install.sh
 )
